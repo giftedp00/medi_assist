@@ -9,7 +9,8 @@ export const generateMedicationImage = async (name: string, description: string)
   const ai = new GoogleGenAI({ apiKey: API_KEY });
   
   try {
-    const prompt = `A professional, clinical studio photograph of a ${description}. The bottle has a clean white pharmacy label with the word "${name}" printed clearly and legibly in bold, professional black font. Soft neutral background, medical quality lighting, high resolution.`;
+    // Specifically demanding high-contrast bold text for accessibility.
+    const prompt = `A macro product photograph of a clinical medication bottle which is ${description}. The bottle has a high-contrast white label with the word "${name}" printed in massive, bold, ultra-legible black letters. The text "${name}" takes up 50% of the label space. Studio medical lighting, high fidelity, 4k.`;
     
     const response = await ai.models.generateImages({
       model: 'imagen-4.0-generate-001',

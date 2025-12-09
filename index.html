@@ -8,18 +8,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      :root {
+        font-size: 18px; /* Larger base font for elderly users */
+      }
       body {
         font-family: 'Inter', sans-serif;
         background-color: #f8fafc;
-      }
-      .large-font {
-        font-size: 1.25rem;
+        color: #1e293b;
       }
       .btn-primary {
-        @apply bg-blue-600 text-white font-bold py-4 px-8 rounded-2xl shadow-lg hover:bg-blue-700 transition-all text-xl;
+        @apply bg-blue-600 text-white font-bold py-5 px-8 rounded-3xl shadow-xl hover:bg-blue-700 active:scale-95 transition-all text-2xl;
       }
       .btn-secondary {
-        @apply bg-gray-200 text-gray-800 font-bold py-4 px-8 rounded-2xl shadow hover:bg-gray-300 transition-all text-xl;
+        @apply bg-slate-200 text-slate-800 font-bold py-5 px-8 rounded-3xl shadow-md hover:bg-slate-300 transition-all text-2xl;
+      }
+      .agent-bubble {
+        @apply bg-white rounded-3xl p-6 shadow-2xl border-2 border-blue-50 relative;
+      }
+      .agent-bubble::after {
+        content: '';
+        @apply absolute -bottom-3 left-10 w-6 h-6 bg-white border-b-2 border-r-2 border-blue-50 rotate-45;
       }
     </style>
 <script type="importmap">
