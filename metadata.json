@@ -1,0 +1,8 @@
+{
+  "name": "MedAssist",
+  "description": "An empathetic multimodal assistant for elderly patients to manage medications, visual verification, and pharmacy refills.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
